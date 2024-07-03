@@ -3,17 +3,17 @@ import { createContext, useState } from 'react';
 export const GlobalContext = createContext({});
 
 const GlobalService = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
-  const clearAll = () => {
-    setIsOpen(false);
-  };
+  // const clearAll = () => {
+  //   setIsOpen(false);
+  // };
 
   return (
     <GlobalContext.Provider
       value={{
-        isOpen,
-        setIsOpen,
+        showLoginModal,
+        setShowLoginModal,
       }}
     >
       {children}
