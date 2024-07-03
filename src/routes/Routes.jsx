@@ -1,17 +1,18 @@
 import { Suspense } from 'react';
 import { Routes as Switch, Route } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
 
 const Routes = () => {
   return (
     <Switch>
-      {/* <Route
+      <Route
         path="/"
         element={
-          <Suspense fallback={<Loading />}>
-            <HomePage />
-           </Suspense>
+          // <Suspense fallback={<Loading />}>
+          <HomePage />
+          //  </Suspense>
         }
-      /> */}
+      />
 
       {/* <Route
         path="about"

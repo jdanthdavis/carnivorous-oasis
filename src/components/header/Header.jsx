@@ -7,6 +7,7 @@ const Header = () => {
     <div className="header-wrapper">
       <div className="logo-container">
         <img src={Logo} alt="logo" width="50" height="50" />
+        <b>Carnivorous</b>Oasis
       </div>
       <div className="header-btn-container">
         <Link>Plant Catalog</Link>
