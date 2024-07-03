@@ -1,0 +1,171 @@
+.modal-enter {
+  position: relative;
+  animation: modelEnter 0.5s;
+}
+
+.modal-exit {
+  position: relative;
+  animation: modelExit 0.5s;
+}
+
+@keyframes modelEnter {
+  from {
+    bottom: 1000px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes modelExit {
+  from {
+    top: 1000px;
+    opacity: 1;
+  }
+
+  to {
+    top: 2000px;
+    opacity: 0;
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close-btn {
+  font-size: 20px;
+  max-width: fit-content;
+  align-self: end;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 40px;
+  border: 1px solid #888;
+  max-width: 15%;
+  display: flex;
+  justify-content: center;
+  border-radius: 54px;
+  flex-direction: column;
+}
+
+.greeting-container {
+  display: flex;
+  align-items: center;
+}
+
+.wave-icon {
+  font-size: 56px;
+}
+
+.login-input-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+
+  label {
+    display: grid;
+    grid-template: 1fr / auto 1fr;
+    gap: 12px;
+    border: 1px solid #cfd5db;
+    border-radius: 5px;
+    background: #fafafa;
+    padding: 12px;
+    color: #6c757d;
+    cursor: text;
+    margin-bottom: 10px;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  label:focus-within {
+    border: 1px solid #000;
+  }
+
+  label > input {
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+
+  .login-labels {
+    input::placeholder {
+      color: red;
+    }
+  }
+}
+
+.forgot-pass-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  color: #757575;
+}
+
+.keep-signed-container {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.forgot-password {
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  padding: unset;
+  color: inherit;
+}
+
+.login-btn-container {
+  margin-top: 15px;
+}
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darksalmon;
+  min-width: 100%;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.sign-up-container {
+  text-align: center;
+  margin-top: 20px;
+  color: #757575;
+}
+
+.create-account-link {
+  text-decoration: underline;
+  padding: unset;
+  color: inherit;
+  cursor: pointer;
+}
+
+.create-account-card,
+.account-login-card {
+  transition-duration: 400ms;
+}
+
+.create-account-card.loading,
+.account-login-card.loading {
+  transform: rotateY(180deg);
+}
